@@ -1,0 +1,110 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body p {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.6;
+}
+body p.price_promo {
+  font-family: "Fraunces", serif;
+}
+body p.subheader {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+body h1 {
+  font-family: "Fraunces", serif;
+  font-size: 1.9rem;
+  color: hsl(212, 21%, 14%);
+  margin-top: 0;
+}
+body main {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 375px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px;
+}
+@media only screen and (min-width: 560px) {
+  body main {
+    flex-direction: row;
+    max-width: 590px;
+  }
+}
+body main img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+body main img.img-desktop {
+  display: none;
+}
+@media only screen and (min-width: 560px) {
+  body main img.img-mobile {
+    display: none;
+  }
+  body main img.img-desktop {
+    display: block;
+    width: 50%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+}
+body main section {
+  padding: 36px;
+}
+@media only screen and (min-width: 560px) {
+  body main section {
+    width: 50%;
+  }
+}
+body main section .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main section .price p {
+  margin-bottom: 0;
+}
+body main section .price p.price_promo {
+  color: hsl(158, 36%, 37%);
+  font-size: 1.8rem;
+}
+body main section .price p.price_original {
+  padding: 10px 20px;
+  text-decoration: line-through;
+}
+body main section article a {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  text-align: center;
+  line-height: 0;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+body main section article a:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+/*# sourceMappingURL=style.css.map */

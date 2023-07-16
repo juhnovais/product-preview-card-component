@@ -1,0 +1,138 @@
+// ## Colors
+
+// ### Primary
+
+$dark_cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+
+// ### Neutral
+
+$very_dark_blue: hsl(212, 21%, 14%);
+$dark_grayish_blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: $cream;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0;
+    font-size: 14px;
+    color: $dark_grayish_blue;
+    line-height: 1.6;
+
+    &.price_promo {
+      font-family: "Fraunces", serif;
+    }
+
+    &.subheader {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+  }
+
+  h1 {
+    font-family: "Fraunces", serif;
+    font-size: 1.9rem;
+    color: $very_dark_blue;
+    margin-top: 0;
+  }
+
+  main {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 375px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px;
+    
+
+    @media only screen and (min-width: 560px) {
+        flex-direction: row;
+        max-width: 590px;
+    }
+
+    img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      
+
+      &.img-desktop {
+        display: none;
+      }
+
+      @media only screen and (min-width: 560px) {
+        &.img-mobile {
+            display: none;
+          }
+          &.img-desktop {
+            display: block;
+            width: 50%;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-top-right-radius: 0px;
+          }
+      }
+    }
+
+
+    section {
+      padding: 36px;
+
+      @media only screen and (min-width: 560px) {
+        width: 50%;
+      }
+
+      .price {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+
+          &.price_promo {
+            color: $dark_cyan;
+            font-size: 1.8rem;
+          }
+          &.price_original {
+            padding: 10px 20px;
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      article {
+        a {
+            background-color: hsl(158, 36%, 37%);
+            color: hsl(0, 0%, 100%);
+            text-decoration: none;
+            text-align: center;
+            line-height: 0;
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+            box-sizing: border-box;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: "Montserrat", sans-serif;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: $very_dark_blue;
+            }
+        }
+      }
+    }
+  }
+}
